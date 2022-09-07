@@ -11,9 +11,24 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  max-height: max-content;
   overflow: hidden;
   user-select: none;
+
+  padding: 1.5rem;
+}
+
+.clock_outer {
+  background-color: black;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.clock_inner {
+  background-color: rgb(255, 255, 255);
+  padding: 0.5rem;
+  border-radius: 50%;
 }
 
 .clock {
@@ -80,7 +95,7 @@ body {
 }
 
 .clock .hand {
-  --rotation: 0;
+  --rotation: 100%;
   position: absolute;
   background-color: black;
   bottom: 50%;
@@ -128,4 +143,53 @@ body {
   width: 10px;
   height: 35%;
   background-color: black;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+/* digital clock */
+.digital_clock {
+  min-height: 70px;
+  background-color: black;
+  margin-top: 1rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.digital_inner {
+  background-color: white;
+  min-height: 60px;
+  width: 100%;
+  margin: 0.5rem;
+  display: flex;
+}
+
+.box {
+  margin: 0.2rem;
+  width: 100%;
+  background-color: rgb(77, 77, 77);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 2px;
+}
+
+.num {
+  background-color: rgb(39, 38, 38);
+  margin: 0.2rem 0.3rem;
+  min-height: 45px;
+  width: 100%;
+
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2rem;
+
+  color: white;
 }

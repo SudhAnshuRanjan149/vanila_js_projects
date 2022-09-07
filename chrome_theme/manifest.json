@@ -1,0 +1,11 @@
+{
+	"name": "Awesome Override Extension",
+	"chrome_url_overrides" : {
+	  "newtab": "override_page.html"
+	}
+	,
+	"description": "A simplec color picker extension",
+	"version": "0.0.1",
+	"manifest_version": 3,
+	"permissions": ["activeTab", "scripting"]
+  }
