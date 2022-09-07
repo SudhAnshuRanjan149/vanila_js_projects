@@ -1,11 +1,14 @@
 {
-	"name": "Awesome Override Extension",
+	"name": "A Simple Chrome theme",
 	"chrome_url_overrides" : {
 	  "newtab": "override_page.html"
 	}
 	,
-	"description": "A simplec color picker extension",
+	"description": "A simple chrome theme that will give you a better experience and give your chrome a fresh look.",
 	"version": "0.0.1",
 	"manifest_version": 3,
-	"permissions": ["activeTab", "scripting"]
+	"permissions": ["activeTab"],
+	"icons": {
+		"128": "logo.png"
+	  }
   }
