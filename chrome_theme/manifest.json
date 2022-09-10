@@ -7,7 +7,6 @@
 	"description": "A simple chrome theme that will give you a better experience and give your chrome a fresh look.",
 	"version": "0.0.1",
 	"manifest_version": 3,
-	"permissions": ["activeTab"],
 	"icons": {
 		"128": "logo.png"
 	  }

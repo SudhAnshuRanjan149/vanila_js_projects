@@ -17,3 +17,21 @@ body{
 	cursor: pointer;
 }
 
+.selectedColor{
+	display: flex;
+	margin: .4rem;
+	align-items: center;
+	gap: 0.5rem;
+	justify-content: center;
+}
+
+.colorGrid{
+	display: inline-block;
+	width: 20px;
+	height: 20px;
+	border-radius: 2px;
+}
+
+.colorValue{
+	font-weight: bold;
+}
