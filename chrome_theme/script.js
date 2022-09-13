@@ -19,6 +19,7 @@ const greetings = ["Good morning", "Good afternoon", "Good evening"];
 let quoteOfTheDay = "";
 
 async function fetchQuotes() {
+  rollBg();
   const options = {
     method: "GET",
     headers: {
@@ -73,12 +74,12 @@ function setClock() {
   setRotation(minuteHand, minutesRatio);
   setRotation(hourHand, hoursRatio);
 
-  if(overlayFlag){
-	overlayFlag = false;
-	handSecond.style.display = 'block';
-	handMinute.style.display = 'block';
-	handHour.style.display = 'block';
-	overlay.style.display = 'none';
+  if (overlayFlag) {
+    overlayFlag = false;
+    handSecond.style.display = "block";
+    handMinute.style.display = "block";
+    handHour.style.display = "block";
+    overlay.style.display = "none";
   }
 }
 
@@ -86,7 +87,34 @@ function setRotation(element, rotationRatio) {
   element.style.setProperty("--rotation", rotationRatio * 360);
 }
 
-// *******************************************************
+// Gradient set --------------------------------------------------------
+function newGradient() {
+  let c1 = {
+    r: Math.floor(35 + Math.random() * 220),
+    g: Math.floor(35 + Math.random() * 220),
+    b: Math.floor(35 + Math.random() * 220),
+  };
+  let c2 = {
+    r: Math.floor(35 + Math.random() * 220),
+    g: Math.floor(35 + Math.random() * 220),
+    b: Math.floor(35 + Math.random() * 220),
+  };
+  c1.rgb = "rgb(" + c1.r + "," + c1.g + "," + c1.b + ")";
+  c2.rgb = "rgb(" + c2.r + "," + c2.g + "," + c2.b + ")";
+  return "radial-gradient(at top left, " + c1.rgb + ", " + c2.rgb + ")";
+}
 
+function rollBg() {
+  try {
+    document.body.style.background =
+      "url(" +
+      "https://source.unsplash.com/random/1920x1080/?city,night,nature,fruit,sky,coding,food,devotional,cars" +
+      ")";
+  } catch (e) {
+    document.body.style.background = newGradient();
+  }
+}
+
+// ---------------------------------------------------------------------
 setInterval(setClock, 1000);
 setInterval(fetchQuotes, 1000 * 60 * 60);

@@ -8,14 +8,17 @@
 }
 
 body {
-  background: url("https://source.unsplash.com/random/1920x1080/?city,night,nature,fruit,sky,coding,food,devotional,cars");
-
+  background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(0,255,111,1) 0%, rgba(20,164,183,1) 100%, rgba(40,76,253,1) 100%, rgba(252,176,69,1) 100%);
   display: flex;
   justify-content: center;
   align-items: center;
   user-select: none;
   z-index: 1;
   overflow: hidden;
+
+  width: 100vw;
+  height: 100vh;
+
 }
 .overlay {
   width: 100vw;
@@ -254,13 +257,13 @@ body {
 
 .quote {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 500;
   color: white;
 }
 .author {
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: white;
 }
