@@ -1,0 +1,74 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+body,
+.panel,
+.panel-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel {
+  width: 200px;
+  height: 200px;
+  border: 1px solid;
+  perspective: 240px;
+
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(0, 255, 111, 1) 0%,
+    rgba(20, 164, 183, 1) 100%,
+    rgba(40, 76, 253, 1) 100%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+
+.panel-body {
+  width: 150px;
+  height: 150px;
+  border: 1px solid rgb(110, 110, 110);
+
+  border-radius: 50%;
+  transition: ease-in-out 1s;
+
+  animation: rotateOnX 2s linear infinite, change 3s infinite linear 0.5s;
+
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.panel-body:hover {
+  scale: 1.25;
+  translate: 0% 25%;
+}
+
+@keyframes rotateOnX {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes change {
+  0%,
+  33.33% {
+    background-image: url("/Asset/img2.png");
+  }
+  33.34%,
+  66.66% {
+    background-image: url("/Asset/img1.jpeg");
+  }
+  66.67%,
+  100% {
+    background-image: url("/Asset/img3.png");
+  }
+}
